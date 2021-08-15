@@ -20,6 +20,11 @@ body {
 .mr-left{
     margin-left: 77%;
 }
+
+.img-cert{
+    width: 516px;
+    height: 416px;
+}
 @media (min-width: 992px) {
     #hometext {
         font-size: 4rem;

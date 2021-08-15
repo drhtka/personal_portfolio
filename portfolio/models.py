@@ -9,7 +9,7 @@ class Project(models.Model):
         verbose_name_plural = 'портфолио'
     
     title = models.CharField('Заголовок', max_length=100)
-    description = models.CharField('Описание', max_length=250)
+    description = models.TextField('Описание', max_length=250)
     image = models.ImageField('Фото', upload_to='portfolio/images/')
     url = models.URLField('Ссылка на сайт', blank=True)
 

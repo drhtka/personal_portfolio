@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure--n2akrkwq4%!ryu*5=8bi7@3szh3phn4hnmyzksn8g&ea$yih3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
+SITE_ID = 1
 
 # Application definition
 
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'personal_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'portfolio/templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -136,11 +136,17 @@ STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, 'static/main/img'),
 
 ]
-try:
-    from .local_settings import *
-except ImportError:
-    print("Looks like no local file. You must be on production")
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     print("Looks like no local file. You must be on production")
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+# 
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_FINDERS = (
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+
+)

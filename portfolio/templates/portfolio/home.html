@@ -1,15 +1,12 @@
-{% extends 'portfolio/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block title %}<title>Дмитрий  😊</title>{% endblock title %}
 {% block content %}
 
-    {% load static %}
-
-
 
     <div class="row justify-content-center my-3">
         <div class="col-5">
-            <img src="{% static "portfolio/1.jpg" %}"  class="img-fluid">
+            <img src="{% static "portfolio/img/1.jpg" %}"  class="img-fluid">
         </div>
     </div>
     <div class="row justify-content-center mb-3">
@@ -17,7 +14,7 @@
             <h1 id="hometext" class="font-weight-bold">Портфолио Дмитрий  😊</h1>
         </div>
     </div>
-    <h2 class="mt-5">Портфолио</h2>
+    <h2 class="mt-5">Работы</h2>
     <hr>
     <div class="row">
     {% for project in projects %}
@@ -36,5 +33,34 @@
     {% endfor %}
     </div>
 {% endblock content %}
+
+{% block certificate %}
+
+<h2 class="mt-5">Мои Сертификаты</h2>
+<hr>
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <img src="{% static "portfolio/img/html.jpg" %}"  class="img-cert">
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <img src="{% static "portfolio/img/css.jpg" %}"  class="img-cert">
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <img src="{% static "portfolio/img/JavaScript.jpg" %}"  class="img-cert">
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-lg-4 col-md-4">
+        <img src="{% static "portfolio/img/jQuery.jpg" %}"  class="img-cert">
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <img src="{% static "portfolio/img/Python.jpg" %}"  class="img-cert">
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <img src="{% static "portfolio/img/sql.jpg" %}"  class="img-cert">
+    </div>
+</div>
+{% endblock certificate  %}
+
 
 

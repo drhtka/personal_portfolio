@@ -13,7 +13,13 @@ body {
 #blogtitle {
     font-size: 6rem;
 }
-
+.ig-home{
+    width: 416px;
+    height: 216px;
+}
+.mr-left{
+    margin-left: 77%;
+}
 @media (min-width: 992px) {
     #hometext {
         font-size: 4rem;

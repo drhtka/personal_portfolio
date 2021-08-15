@@ -6,6 +6,7 @@ class Blog(models.Model):
         db_table = 'blog'
         verbose_name = 'Блог'
         verbose_name_plural = 'Блог'
+        ordering = ['-id']
 
     title = models.CharField('Заголовок', max_length=200)
     description = models.TextField('Описание',)
