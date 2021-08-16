@@ -5,6 +5,8 @@
 
 <p>7 проектов включая этот</p>
 
+![alt text](screenshots/filename.jpg "Описание будет тут")
+
 <h4 align="center">Содержание</h4>
 <ol>
     <li>Портфолио</li>
